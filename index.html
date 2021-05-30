@@ -14,61 +14,27 @@
   <!-- Bootstrap -->
   <!-- basically provides pre-written css accessed using different class names -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <!-- Fuzzy searching using fuse -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
 </head>
 <body>
   <div class="container py-5">
     <h1>Crisis Resources</h1>
-    <input class="form-control" type="text" id="searchBar" onkeyup="searchArray()" placeholder="Search for a region or city...">
+    <input class="form-control" type="text" id="searchBar" placeholder="Search for a region or city...">
+    <div id="searchContainer" class="py-2">
+      <ul id="results" class="py-2 bg-light">
+      </ul>
+    </div>
     <div class="py-5">
-      <h2>All resources</h2>
+      <h2>All regions</h2>
       <div id="list-all-posts">
-
+        <p id="resource-list"></p>
       </div>
     </div>
   </div>
 </body>
 </html>
-<script>
-  // when document loads, parse json file
-  $(document).ready(function() {
-    $.getJSON("./regions.json", function(regions){
-      // fetch div with id
-      let list_div = document.getElementById('list-all-posts')
-      let p = document.createElement('p')
-      p.id = "resource_list"
-      // create a loop that loops over all items in the ontario array
-      for (let i = 0; i < regions.Ontario.length; i++)
-      {
-        // create <a> element
-        let a = document.createElement('a')
-        a.id = "resource_link"
-        // get json specified file path and put that in href
-        a.href = regions.Ontario[i].file_path
-        // change text to name
-        a.innerHTML = regions.Ontario[i].name + ", "
-        // append <a> element inside <p>
-        p.appendChild(a)
-      }
-      // append <p> into list_div element
-      list_div.appendChild(p)
-      for (let i = 0; i < regions.NovaScotia.length; i++)
-      {
-        let a = document.createElement('a')
-        a.id = "resource_link"
-        a.href = regions.NovaScotia[i].file_path
-        a.innerHTML = regions.NovaScotia[i].name + ", "
-        p.appendChild(a)
-      }
-      list_div.appendChild(p)
-      for (let i = 0; i < regions.Quebec.length; i++)
-      {
-        let a = document.createElement('a')
-        a.id = "resource_link"
-        a.href = regions.Quebec[i].file_path
-        a.innerHTML = regions.Quebec[i].name + ", "
-        p.appendChild(a)
-      }
-      list_div.appendChild(p)
-    })
-  })
-</script>
+<script src="/regions/newfoundland.js"></script>
+<script src="/regions/novascotia.js"></script>
+<script src="/regions/ontario.js"></script>
+<script src="/regions/quebec.js"></script>
