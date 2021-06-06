@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-transparent">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,28 +14,70 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
   <!-- Bootstrap -->
   <!-- basically provides pre-written css accessed using different class names -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  <!-- Fuzzy searching using fuse -->
-  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <!-- Bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
+
 <body>
-  <div class="container py-5">
-    <h1>Crisis Resources</h1>
-    <input class="form-control" type="text" id="searchBar" placeholder="Search for a region or city...">
-    <div id="searchContainer" class="py-2">
-      <ul id="results" class="py-2 bg-light">
-      </ul>
-    </div>
-    <div class="py-5">
-      <h2>All regions</h2>
-      <div id="list-all-posts">
-        <p id="resource-list"></p>
+  <div class="container-fluid py-2">
+    <div class="card bg-light">
+      <div class="p-3">
+        <div class="px-5">
+          <h1 id="crisis-resources" style="text-decoration: underline; text-decoration-color: #B8B08D; color: #283845;"
+            class="display-2 fw-bold">
+            Crisis Resources
+          </h1>
+          <p class="fs-1">
+            If you are experiencing a mental health or addictions related crisis:
+          <ul class="fs-4">
+            <li>Contact your doctor</li>
+            <li>Go to the nearest hospital</li>
+          </ul>
+          </p>
+          <h1 id="search" class="display-6 fw-bold" style="color: #283845;">
+            <a href="#search" style="color: #F29559"><i class="bi bi-link-45deg"></i></a>
+            Search for a region below
+          </h1>
+          <div class="py-2">
+            <input class="form-control form-control-lg w-25 border border-2" type="text" id="searchBar"
+              placeholder="Search for a region or city...">
+            <div id="searchContainer" class="py-2">
+              <ul id="results" class="py-2 fs-5">
+              </ul>
+            </div>
+          </div>
+          <h1 id="dropdown-regions" class="display-6 fw-bold" style="color: #283845;">
+            <a href="#dropdown-regions" style="color: #F29559" onclick=""><i class="bi bi-link-45deg"></i></a>
+            Select your region below
+          </h1>
+          <div class="py-2">
+            <select class="form-select form-select-lg w-25" data-target="showProvinces">
+              <option selected>Ontario</option>
+              <option value="newfoundland" data-show=".newfoundland">Newfoundland & Labrador</option>
+              <option value="quebec" data-show=".quebec">Quebec</option>
+              <option value="bc" data-show=".bc">British Columbia</option>
+              <option value="saskatchewan" data-show=".saskatchewan">Saskatchewan</option>
+              <option value="alberta" data-show=".alberta">Alberta</option>
+              <option value="novascotia" data-show=".novascotia">Nova Scotia</option>
+              <option value="newbrunswick" data-show=".newbrunswick">New Brunswick</option>
+              <option value="pei" data-show=".pei">Prince Edward Island</option>
+              <option value="manitoba" data-show=".manitoba">Manitoba</option>
+              <option value="nunavut" data-show=".nunavut">Nunavut</option>
+              <option value="nwt" data-show=".nwt">Northwest Territories</option>
+              <option value="yukon" data-show=".yukon">Yukon</option>
+            </select>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </body>
+
 </html>
 <script src="/regions/newfoundland.js"></script>
 <script src="/regions/novascotia.js"></script>
 <script src="/regions/ontario.js"></script>
 <script src="/regions/quebec.js"></script>
+<script src="searchRegions.js"></script>
