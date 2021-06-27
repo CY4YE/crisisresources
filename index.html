@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" class="bg-transparent">
-
+<div id="container">
+    <img width="101%;" height="100%;" src="title.jpg">
+</div>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,62 +22,300 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
 
-<body>
-  <div class="container-fluid py-2">
-    <div class="card bg-light">
-      <div class="p-3">
-        <div class="px-5">
-          <h1 id="crisis-resources" style="text-decoration: underline; text-decoration-color: #B8B08D; color: #283845;"
-            class="display-2 fw-bold">
-            Crisis Resources
-          </h1>
-          <p class="fs-1">
-            If you are experiencing a mental health or addictions related crisis:
-          <ul class="fs-4">
-            <li>Contact your doctor</li>
-            <li>Go to the nearest hospital</li>
-          </ul>
-          </p>
-          <h1 id="search" class="display-6 fw-bold" style="color: #283845;">
-            <a href="#search" style="color: #F29559"><i class="bi bi-link-45deg"></i></a>
-            Search for a region below
-          </h1>
-          <div class="py-2">
-            <input class="form-control form-control-lg w-25 border border-2" type="text" id="searchBar"
-              placeholder="Search for a region or city...">
-            <div id="searchContainer" class="py-2">
-              <ul id="results" class="py-2 fs-5">
-              </ul>
-            </div>
-          </div>
-          <h1 id="dropdown-regions" class="display-6 fw-bold" style="color: #283845;">
-            <a href="#dropdown-regions" style="color: #F29559" onclick=""><i class="bi bi-link-45deg"></i></a>
-            Select your region below
-          </h1>
-          <div class="py-2">
-            <select class="form-select form-select-lg w-25" data-target="showProvinces">
-              <option selected>Ontario</option>
-              <option value="newfoundland" data-show=".newfoundland">Newfoundland & Labrador</option>
-              <option value="quebec" data-show=".quebec">Quebec</option>
-              <option value="bc" data-show=".bc">British Columbia</option>
-              <option value="saskatchewan" data-show=".saskatchewan">Saskatchewan</option>
-              <option value="alberta" data-show=".alberta">Alberta</option>
-              <option value="novascotia" data-show=".novascotia">Nova Scotia</option>
-              <option value="newbrunswick" data-show=".newbrunswick">New Brunswick</option>
-              <option value="pei" data-show=".pei">Prince Edward Island</option>
-              <option value="manitoba" data-show=".manitoba">Manitoba</option>
-              <option value="nunavut" data-show=".nunavut">Nunavut</option>
-              <option value="nwt" data-show=".nwt">Northwest Territories</option>
-              <option value="yukon" data-show=".yukon">Yukon</option>
-            </select>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
+<head>
+  <style>
+  /* (A) ENTIRE LIST */
+  .hlist {
+    /* (A1) FLEXIBLE BOX */
+    display: flex;
+    width: 100%;
+    /* (A2) REMOVE DEFAULT INDENTATIONS */
+    padding: 0;
+    padding-right: 10px;
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 1400px;
 
+  }
+
+  /* (B) LIST ITEMS */
+  .hlist li {
+    list-style-type: none;
+    box-sizing: border-box;
+    padding: 15px;
+    background: #F29559;
+    width: 100%; /* Auto spacing */
+    border-radius: 7px;
+    margin: 5px;
+    text-align: center;
+    color: #283845;
+    font-size: 20px;
+
+  }
+
+  /* (C) RESPONSIVE SUPPORT - ON SMALL SCREENS */
+  @media screen and (max-width: 830px) {
+    /* (C1) ALLOW LIST ITEMS TO WRAP TO NEW ROW */
+    .hlist { flex-wrap: wrap; }
+    /* (C2) 2 ITEMS PER ROW */
+    .hlist li { width: 48%; }
+  }
+  * {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 70%;
+  padding: 10px;
+}
+
+.hover:hover {
+    background: #F4AB7B;
+    color: white;
+}
+
+.column2 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+
+<div class="row">
+  <div class="column1" style="background-color:#202C39;">
+<body max-width="400px;">
+  <ul class="hlist">
+    <li  class="hover"onclick="openModal();currentSlide(1)" class="hover-shadow cursor" >Nova Scotia</li> <li class="hover">Ontario</li> <li class="hover">Quebec</li>
+    <li class="hover">New Brunswick</li><li class="hover">Nunavut</li>
+  </ul>
+  <ul class="hlist">
+    <li class="hover">Prince Edward Island</li>
+    <li class="hover">Northwest Territories</li><li class="hover">Newfoundland & Labrador</li>
+  </ul>
+  <ul class="hlist">
+    <li class="hover">Northwest Territories</li><li class="hover">Alberta</li>
+    <li class="hover">British Columbia</li> <li class="hover">Saskatchewan</li><li class="hover">Manitoba</li>
+  </ul>
+</body>
+</div>
+  <div class="column2" style="background-color:#283845;">
+    <body style="right: 10px;">
+        <link rel="stylesheet" href="./style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        <body>
+        <div class="search">
+          <input type="search" class="search-box" />
+          <span class="search-button">
+            <span class="search-icon"></span>
+          </span>
+        </div>
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+    </body>
+</div>
+
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: transparent;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: white;
+  margin: auto;
+  padding: 20;
+  width: 90%;
+  max-width: 1200px;
+  width: 50%;
+  height: 50%;
+  border-width: 10px;
+  border-color: red;
+}
+
+/* The Close Button */
+.close {
+  color: red;
+  position: absolute;
+  top: 110px;
+  right: 390px;
+  font-size: 35px;
+  font-weight: bold;
+  width: 10px;
+  height: 10px;
+  z-index: 9999;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.my-button {
+    display: inline-block;
+    margin: 5px; /* space between buttons */
+    background: #202C39; /* background color */
+    color: #F29559; /* text color */
+    font-size: 1.5em;
+    font-style: italic;
+    border-radius: 50px; /* rounded corners */
+    padding: 8px 16px; /* space around text */
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    text-decoration: none;
+    text-align: center;
+}
+.my-button:hover {
+    background: #283845;
+    color: #F2D492;
+}
+</style>
+<body>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <h2 style="padding: 20px;">
+      If you are experiencing a mental health or addictions related crisis:
+    <ul class="fs-4"><br>
+      <li>Contact your doctor</li>
+      <li>Go to the nearest hospital</li>
+    </ul>
+    </h2>
+
+<a class="my-button" title="Relevant Title" href="#">Continue</a>
+<a class="my-button" title="Relevant Title" href="#">Contact Doctor</a>  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+</body>
 </html>
+
+
 <script src="/regions/newfoundland.js"></script>
 <script src="/regions/novascotia.js"></script>
 <script src="/regions/ontario.js"></script>
