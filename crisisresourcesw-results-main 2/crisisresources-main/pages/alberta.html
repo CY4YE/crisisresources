@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alberta | Crisis resources</title>
+  <!-- Chart.JS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!--Showdown JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <!-- Bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <!-- Prefix free -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <!-- Local css -->
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Gradient List style -->
+  <link rel="stylesheet" href="../css/liststyle.css">
+
+
+
+  <!-- Fuse Js -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+  <!-- Regions Data -->
+  <script src="../utils/regions_data.js"></script>
+</head>
+
+<body class="card123" style="overflow-x: hidden;">
+  <div id="container">
+    <img width="101%;" height="100%;" src="../img/title.jpg">
+  </div>
+  <div class="row">
+    <div class="column1" style="background-color:#202C39;">
+      <div max-width="400px;">
+        <ul class="hlist">
+          <li class="hover" class="my-button" onclick="openModal(); currentSlide(); " class="hover-shadow cursor">Nova
+            Scotia</li>
+          <li class="hover">Ontario</li>
+          <li class="hover">Quebec</li>
+          <li class="hover">New Brunswick</li>
+          <li class="hover">Nunavut</li>
+        </ul>
+        <ul class="hlist">
+          <li class="hover">Prince Edward Island</li>
+          <li class="hover">Northwest Territories</li>
+          <li class="hover">Newfoundland & Labrador</li>
+        </ul>
+        <ul class="hlist">
+          <li class="hover">Northwest Territories</li>
+          <li class="hover">Alberta</li>
+          <li><a style="text-decoration:none; color: black" href="bc.html">British Columbia</a></li>
+          <li class="hover">Saskatchewan</li>
+          <li class="hover">Manitoba</li>
+        </ul>
+      </div>
+    </div>
+    <div class="column2" style="background-color:#283845;">
+      <div style="right: 10px;">
+        <div class="search" id="search-container">
+          <input type="search" class="search-box" id="search-input" />
+          <span class="search-button">
+            <span class="search-icon"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- partial:index.partial.html -->
+  <html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./liststyle.css">
+  <main>
+    <h1>Alberta</h1>
+    <hr>
+    <ol class="gradient-list">
+      <h2 style=" padding-bottom:20px; padding-top:20px;">Calgary Metropolitan Region</h2>
+      <li>
+        <h4>Calgary</h4>
+        <p>Here is a little info about this crisis resource. It is enough info for the person to understand the site
+          they will be entering, where it is located, and what the crisis resource is for,etc.</p>
+        <button style="border-radius:10px; background-color: #F29559; border: none; padding: 10px;">
+            <a href="../region/Alberta/calgary.html" style="color: #333;" class="text-decoration-none">Visit
+            Resource</a>
+        </button>
+      </li>
+      <li>
+        <h4>Airdire</h4>
+        <p>Here is a little info about this crisis resource. It is enough info for the person to understand the site
+          they will be entering, where it is located, and what the crisis resource is for,etc.</p>
+        <button style="border-radius:10px; background-color: #F29559; border: none; padding: 10px;">Visit
+          Resource</button>
+      </li>
+      <li>
+        <h4>Chestermore</h4>
+        <p>Here is a little info about this crisis resource. It is enough info for the person to understand the site
+          they will be entering, where it is located, and what the crisis resource is for,etc.</p>
+        <button style="border-radius:10px; background-color: #F29559; border: none; padding: 10px;">Visit
+          Resource</button>
+      </li>
+      <li>
+        <h4>Cochrane</h4>
+        <p>Here is a little info about this crisis resource. It is enough info for the person to understand the site
+          they will be entering, where it is located, and what the crisis resource is for,etc.</p>
+        <button style="border-radius:10px; background-color: #F29559; border: none; padding: 10px;">Visit
+          Resource</button>
+      </li>
+      ...
+    </ol>
+  </main>
+  <!-- partial -->
+</body>
+<script src="../utils/regionsButton.js"></script>
+<script src="../utils/slides.js"></script>
+<script src="../utils/modal.js"></script>
+<script src="../utils/search.js"></script>
+
+</html>
