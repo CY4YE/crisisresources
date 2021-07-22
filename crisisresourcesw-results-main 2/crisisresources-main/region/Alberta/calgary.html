@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calgary | Crisis resources</title>
+    <!-- Chart.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--Showdown JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- Prefix free -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <!-- Local css -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- GFM -->
+    <link rel="stylesheet" href="../../css/gfm.css">
+    <!-- Fuse Js -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+    <!-- Regions Data -->
+    <script src="../../utils/regions_data.js"></script>
+</head>
+
+<body class="card123" style="overflow-x: hidden;">
+    <!-- <div id="container">
+        <img width="101%;" height="100%;" src="../../img/title.jpg">
+    </div> -->
+    <div class="" style="background-color:#202C39;">
+        <h1 style="font-size: 10em;" class="py-3 text-white">Calgary - <a href="../../pages/alberta.html"
+                style="color:#F2D492;" class="text-decoration-none">A.B</a>
+        </h1>
+    </div>
+    <div class="row">
+        <div class=" column1" style="background-color:#202C39;">
+            <div max-width="400px;">
+                <ul class="hlist">
+                    <li class="hover" class="my-button" onclick="openModal(); currentSlide(); "
+                        class="hover-shadow cursor">
+                        Nova
+                        Scotia</li>
+                    <li class="hover">Ontario</li>
+                    <li class="hover">Quebec</li>
+                    <li class="hover">New Brunswick</li>
+                    <li class="hover">Nunavut</li>
+                </ul>
+                <ul class="hlist">
+                    <li class="hover">Prince Edward Island</li>
+                    <li class="hover">Northwest Territories</li>
+                    <li class="hover">Newfoundland & Labrador</li>
+                </ul>
+                <ul class="hlist">
+                    <li class="hover">Northwest Territories</li>
+                    <li class="hover">Alberta</li>
+                    <li><a style="text-decoration:none; color: black" href="bc.html">British Columbia</a></li>
+                    <li class="hover">Saskatchewan</li>
+                    <li class="hover">Manitoba</li>
+                </ul>
+            </div>
+        </div>
+        <div class="column2" style="background-color:#283845;">
+            <div style="right: 10px;">
+                <div class="search" id="search-container">
+                    <input type="search" class="search-box" id="search-input" />
+                    <span class="search-button">
+                        <span class="search-icon"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--
+    The following is done in markdown, so I added the Github css styling (../../css/gfm.css) to make it look similar to Github's README files.
+    So if you want to add some background colour to the tables, I think it would work if it's in ../../css/style.css
+
+    .markdown-content table th {
+        background-color: some-color!important;
+    }
+
+    might be able to override the default color of the headings in the tables
+ -->
+ <!DOCTYPE html>
+ <html lang="en" >
+ <head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="./liststyle.css">
+
+ </head>
+ <body class="card123">
+   <main>
+    <div class="container markdown-content" style="max-width: 120em;" id="markdown-content">
+
+
+<img src="https://img.shields.io/badge/EMERGENCY-911-critical" alt="" style="height: 3em; float: right;" class="mb-2">
+<br>
+<div class="card" style="font-size: 20px; text-align: left;  margin-bottom: 10px; width: 100%;">
+  <ul style="list-style: none; margin: 0; padding: 0;">Location:
+    <a href="index.html"><li style="display: inline; background-color: #F29559; border-radius: 10px; padding: 10px; color: white;">Canada</li></a>  ———>
+    <a href="crisisresources-main/alberta.html"><li style="display: inline; background-color: #F29559; border-radius: 10px; padding: 10px; color: white;">Alberta</li></a>  ———>
+    <a href="calgary.html"><li style="display: inline; background-color: white; border-radius: 10px; padding: 10px; color: #F29559;">Calgary</li></a>
+  </ul>
+</div>
+<div id="resources" style="background-color: #F29559; border-radius: 10px; padding-left: 40px; padding-right: 20px; padding-top: 10px; padding-bottom: 40px; color: white;">
+<h1>Jump To Resource:</h1>
+
+<a href="#humanrights"><li>Human Rights</a></li>
+<a href="#violenceandabuse"><li> Violence and Abuse</a></li>
+<a href="#addictions"><li> Addictions</a></li>
+<a href="#bullying"><li> Bullying</a></li>
+<a href="#mentalhealth"><li> Mental Health</a></li>
+<a href="#environment"><li> Environment</a></li>
+</div>
+
+<div id="humanrights"></div>
+<table>
+## Human Rights
+
+| Category | Type (Shelter, Helpline) | Name | Description | Servicing ages | Contact Info | Working hours |
+| --- | --- | --- | --- | --- | --- | --- |
+| Homelessness | Shelter | Brenda's House (Children's Cottage Society) | Families can be together in a safe, home-like environment that includes their own bathroom, they have access to on-site laundry facilities and each day will receive three healthy meals and snacks. | Families with children younger than 18 | [Website](https://childrenscottage.ab.ca/index.php?submenu=Economy&src=gendocs&ref=Brendas%20House&category=Main)<br>1921 28 Street S.W. Calgary, Alberta T3E 2H1 | 24 hours, 7 days a week |
+</table>
+
+<div id="violenceandabuse"></div>
+<table>
+## Violence and Abuse
+</table>
+
+<div id="addictions"></div>
+<table>
+## Addictions
+</table>
+
+<div id="bullying"></div>
+<table>
+## Bullying
+</table>
+
+<div id="mentalhealth"></div>
+<table>
+## Mental Health
+</table>
+
+<div id="environment"></div>
+<table>
+## Environment
+| Category | Type (Shelter, Helpline) | Name | Description | Servicing ages | Contact Info | Working hours |
+| --- | --- | --- | --- | --- | --- | --- |
+| Environment | Environmental Education | Alberta Council for Environmental Education | "As a leader in environmental education, ACEE works at a systems level to reform K-12 education curriculum and bring environmental education into the mainstream; at the grassroots level by guiding children and youth to become environmental leaders in Alberta; and every level in between through its partnerships and professional development for educators". | No age requirements | [Website](https://www.abcee.org/our-ask)<br>Phone: `403-561-1135` | N/A |
+| Environment | Environmental Protection | Alberta Ecotrust Foundation | "Alberta Ecotrust’s work supports the people and projects that effectively address Alberta’s most pressing environmental issues" | No age requirements | [Website](https://albertaecotrust.com)<br>Phone: `403.209.2245`<br>Email: `info@albertaecotrust.com`<br>Suite 250, 305 10 Avenue SE Calgary, Alberta T2G 0W2 | N/A |
+| Environment | Environmental Protection | Alberta Wilderness Association | "Alberta Wilderness Association is a voice for the environment. Since 1965, AWA has inspired communities to care for Alberta’s wild spaces through awareness and action. With a provincial office and library in Calgary, AWA has active members, volunteers, and sponsors throughout Alberta and beyond". | No age requirements | [Website](https://albertawilderness.ca)<br>Phone: `(403) 283-2025`<br>455 – 12 St. NW Calgary, AB T2N 1Y9 | N/A |
+</table>
+    </div>
+    <br>
+<div class="container pb-5" style="max-width: 120em;">
+<hr>
+    <div class="row">
+        <div style=" margin-top: 10px;"  class="col">
+            <h5>Help us improve this page&nbsp;&nbsp;<a href=""><i class="bi bi-box-arrow-up-right"></i></a></h5>
+        </div>
+        <div  style=" margin-top: 10px;" class="col text-end">
+            <h5 class="text-muted"><a  style="background-color: #F29559; border-radius: 10px; padding: 10px; color: white;" href="#top" class="text-decoration-none">Back to top</a></h5>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../utils/regionsButton.js"></script>
+<script src="../../utils/slides.js"></script>
+<script src="../../utils/modal.js"></script>
+<script src="../../utils/search.js"></script>
+<script src="../../utils/markdown.js"></script>
+</main>
+</html>
